@@ -8,9 +8,9 @@ cargo build --release
 mkdir -p lua
 
 if [ "$(uname)" == "Darwin" ]; then
-    mv target/release/libcompleet_client.dylib lua/compleet.so
+    mv target/release/libcompleet_plugin.dylib lua/compleet.so
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    mv target/release/libcompleet_client.so lua/compleet.so
+    mv target/release/libcompleet_plugin.so lua/compleet.so
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
-    mv target/release/compleet.dll lua/compleet.dll
+    mv target/release/compleet_plugin.dll lua/compleet.dll
 fi
